@@ -42,9 +42,11 @@ const UpdateArtist = props => {
       case 'firstName':
         props.updateStateVariable('firstName', value)
         setFirstName(value)
+        break
       case 'lastName':
         props.updateStateVariable('lastName', value)
         setLastName(value)
+        break
       default:
         break
     }

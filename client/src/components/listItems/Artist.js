@@ -26,8 +26,10 @@ const Artist = props => {
     switch (variable) {
       case 'firstName':
         setFirstName(value)
+        break
       case 'lastName':
         setLastName(value)
+        break
       default:
         break
     }
