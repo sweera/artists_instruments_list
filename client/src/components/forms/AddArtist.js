@@ -51,6 +51,7 @@ const AddArtist = () => {
   }
 
   return (
+    
     <Form
       form={form}
       name='add-artist-form'
@@ -86,6 +87,8 @@ const AddArtist = () => {
         )}
       </Form.Item>
     </Form>
+    
+  
   )
 }
 

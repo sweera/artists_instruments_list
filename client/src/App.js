@@ -10,6 +10,8 @@ import AddArtist from './components/forms/AddArtist'
 
 import './App.css'
 import Artists from './components/lists/Artists'
+import AddInstrument from './components/forms/AddInstrument'
+import Instruments from './components/lists/Instruments'
 
 const { Content } = Layout
 
@@ -25,6 +27,8 @@ const App = () => (
         <Title />
         <AddArtist />
         <Artists />
+        <AddInstrument />
+        <Instruments />
       </Content>
     </div>
   </ApolloProvider>
