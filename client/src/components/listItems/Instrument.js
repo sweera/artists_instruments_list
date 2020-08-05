@@ -11,13 +11,16 @@ const getStyles = () => ({
 
 const Instrument = (props) => {
   const [id] = useState(props.id);
-  const [firstName, setFirstName] = useState(props.firstName);
-  const [lastName, setLastName] = useState(props.lastName);
+  const [year, setYear] = useState(props.year);
+  const [brand, setBrand] = useState(props.brand);
+  const [type, setType] = useState(props.type);
+  const [price, setPrice] = useState(props.price);
+  const [artistId, setId] = useState(props.artistId);
   //const [editMode, setEditMode] = useState(false)
   const styles = getStyles();
 
-  const fullName = () => {
-    return `${props.firstName} ${props.lastName}`;
+  const fullInfo = () => {
+    return `${props.year} ${props.brand} ${props.type} `;
   };
 
   //   const updateStateVariable = (variable, value) => {
@@ -31,30 +34,14 @@ const Instrument = (props) => {
   //       default:
   //         break
   //     }
+  //};
+
+  //const handleButtonClick = () => setEditMode(!editMode)
+
+  return (
+    <List.Item key={props.id}>
+      <Card style={styles.card}>{fullInfo()}</Card>
+    </List.Item>
+  );
 };
-
-//const handleButtonClick = () => setEditMode(!editMode)
-
-return (
-  <List.Item key={props.id}>
-    <UpdateArtist
-      id={id}
-      firstName={firstName}
-      lastName={lastName}
-      onButtonClick={handleButtonClick}
-      updateStateVariable={updateStateVariable}
-    />
-    ) : (
-    <Card
-      actions={[
-        <EditOutlined key="edit" onClick={handleButtonClick} />,
-        <RemoveArtist id={id} firstName={firstName} lastName={lastName} />,
-      ]}
-      style={styles.card}
-    >
-      {fullName()}
-    </Card>
-  </List.Item>
-);
-
 export default Instrument;
